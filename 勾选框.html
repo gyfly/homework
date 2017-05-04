@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="js/js/jquery.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <input class="box1" type="checkbox" name="" value="">
+      	<input type="button" name="" id="tijiao" value="提交" disabled="disabled" >
+    </body>
+    <script type="text/javascript">
+	$("input[type='checkbox']").click(function(){
+		var check=$("input[type='checkbox']").prop("checked");//获取勾选框状态
+		var btn=$("input[type='button']");//获取按钮
+		if(check){
+			btn.attr("disabled",false);
+			alert("请勾选后再点击提交");
+		}else{
+			btn.attr("disabled",true)
+		}
+	})
+       
+    </script>
+</html>
